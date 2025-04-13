@@ -2,7 +2,7 @@
 using GestaoMonetariaApi.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GestaoMonetariaApi.Api.Controllers
+namespace GestaoMonetaria.Api.Controllers.Categoria
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -13,7 +13,7 @@ namespace GestaoMonetariaApi.Api.Controllers
         public CategoriaController(ICategoriaService operacaoService)
             : base(operacaoService)
         {
-            this._operacaoService = operacaoService;
+            _operacaoService = operacaoService;
         }
 
 
