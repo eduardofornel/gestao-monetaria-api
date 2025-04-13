@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{D82C56D6-B2CD-F611-9E31-04638F7EC30E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseBackEnd.Api", "Api\BaseBackEnd.Api\BaseBackEnd.Api.csproj", "{765C94CE-79E6-4A1B-8CD7-0ADBFB4AF132}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoMonetaria.Api", "Api\BaseBackEnd.Api\GestaoMonetaria.Api.csproj", "{765C94CE-79E6-4A1B-8CD7-0ADBFB4AF132}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{DFEE68D8-A7D0-1A41-506C-9B74AA9A7B7B}"
 EndProject

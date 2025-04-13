@@ -1,4 +1,4 @@
-﻿using BaseBackEnd.Domain.Entities;
+﻿using GestaoMonetariaApi.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -37,10 +37,10 @@ namespace SeuNamespace
                    .HasColumnName("DT_OPERACAO")
                    .IsRequired();
 
-            //builder.HasOne(o => o.Categoria)
-            //       .WithMany(c => c.Operacoes)
-            //       .HasForeignKey(o => o.IdCategoria)
-            //       .IsRequired();
+            builder.HasOne(o => o.Categoria)
+                   .WithMany(c => c.Operacoes)
+                   .HasForeignKey(o => o.IdCategoria)
+                   .IsRequired();
         }
     }
 }

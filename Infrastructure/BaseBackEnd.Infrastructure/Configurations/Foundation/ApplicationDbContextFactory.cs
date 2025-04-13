@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
-namespace BaseBackEnd.Infrastructure.Configurations.Fundation
+namespace GestaoMonetariaApi.Infrastructure.Configurations.Fundation
 {
     public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {

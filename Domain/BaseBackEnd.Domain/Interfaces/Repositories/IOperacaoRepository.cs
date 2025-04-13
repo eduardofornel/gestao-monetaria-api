@@ -1,6 +1,6 @@
-﻿using BaseBackEnd.Domain.Entities;
+﻿using GestaoMonetariaApi.Domain.Entities;
 
-namespace BaseBackEnd.Domain.Interfaces.Repositories
+namespace GestaoMonetariaApi.Domain.Interfaces.Repositories
 {
     public interface IOperacaoRepository : IBaseRepository<OperacaoEntity>
     {

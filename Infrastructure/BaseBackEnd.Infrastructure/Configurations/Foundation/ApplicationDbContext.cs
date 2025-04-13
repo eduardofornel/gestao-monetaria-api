@@ -1,8 +1,9 @@
-﻿using BaseBackEnd.Domain.Entities;
+﻿using GestaoMonetariaApi.Domain.Entities;
+using GestaoMonetariaApi.Infrastructure.Configurations.Foundation;
 using Microsoft.EntityFrameworkCore;
 using SeuNamespace;
 
-namespace BaseBackEnd.Infrastructure.Configurations.Fundation
+namespace GestaoMonetariaApi.Infrastructure.Configurations.Fundation
 {
     public class ApplicationDbContext : DbContext
     {
@@ -15,6 +16,7 @@ namespace BaseBackEnd.Infrastructure.Configurations.Fundation
         //  DbSets (Entidades)
         // -----------------------
         public DbSet<OperacaoEntity> Operacoes { get; set; }
+        public DbSet<CategoriaEntity> Categorias { get; set; }
 
         // -----------------------
         //  Configurações
@@ -24,6 +26,7 @@ namespace BaseBackEnd.Infrastructure.Configurations.Fundation
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new OperacaoConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoriaConfiguration());
         }
     }
 }

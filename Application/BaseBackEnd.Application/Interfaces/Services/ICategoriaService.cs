@@ -2,7 +2,7 @@
 
 namespace GestaoMonetariaApi.Application.Interfaces.Services
 {
-    public interface IOperacaoService : IBaseService<OperacaoEntity>
+    public interface ICategoriaService : IBaseService<CategoriaEntity>
     {
     }
 }

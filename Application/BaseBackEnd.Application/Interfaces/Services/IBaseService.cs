@@ -1,4 +1,4 @@
-﻿namespace BaseBackEnd.Application.Interfaces.Services
+﻿namespace GestaoMonetariaApi.Application.Interfaces.Services
 {
     public interface IBaseService<T> where T : class
     {

@@ -4,12 +4,10 @@ using GestaoMonetariaApi.Domain.Interfaces.Repositories;
 
 namespace GestaoMonetariaApi.Application.Services
 {
-    public class OperacaoService : BaseService<OperacaoEntity>, IOperacaoService
+    public class CategoriaService : BaseService<CategoriaEntity>, ICategoriaService
     {
-        private readonly IOperacaoRepository _repository;
-
-        public OperacaoService(IOperacaoRepository repository)
-            : base(repository)
+        private readonly ICategoriaRepository _repository;
+        public CategoriaService(ICategoriaRepository repository) : base(repository)
         {
             this._repository = repository;
         }

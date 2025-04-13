@@ -1,4 +1,4 @@
-﻿using BaseBackEnd.Infrastructure.Configurations.Fundation;
+﻿using GestaoMonetariaApi.Infrastructure.Configurations.Fundation;
 using Microsoft.EntityFrameworkCore;
 
 public class BaseRepository<T> : IBaseRepository<T> where T : class

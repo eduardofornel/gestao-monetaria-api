@@ -1,6 +1,8 @@
-﻿namespace BaseBackEnd.Domain.Interfaces.Repositories
+﻿using GestaoMonetariaApi.Domain.Entities;
+
+namespace GestaoMonetariaApi.Domain.Interfaces.Repositories
 {
-    public interface ICategoriaRepository
+    public interface ICategoriaRepository : IBaseRepository<CategoriaEntity>
     {
     }
 }

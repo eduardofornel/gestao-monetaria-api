@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BaseBackEnd.Infrastructure.Configurations.Fundation
+namespace GestaoMonetariaApi.Infrastructure.Configurations.Fundation
 {
     public static class DependencyInjection
     {

@@ -6,11 +6,11 @@ namespace GestaoMonetariaApi.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class OperacaoController : BaseController<OperacaoEntity>
+    public class CategoriaController : BaseController<CategoriaEntity>
     {
-        private readonly IOperacaoService _operacaoService;
+        private readonly ICategoriaService _operacaoService;
 
-        public OperacaoController(IOperacaoService operacaoService)
+        public CategoriaController(ICategoriaService operacaoService)
             : base(operacaoService)
         {
             this._operacaoService = operacaoService;

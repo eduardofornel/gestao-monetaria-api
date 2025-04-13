@@ -1,4 +1,4 @@
-﻿namespace BaseBackEnd.Domain.Entities
+﻿namespace GestaoMonetariaApi.Domain.Entities
 {
     public class OperacaoEntity
     {
@@ -10,7 +10,7 @@
         public decimal Valor { get; set; }
         public DateTime DataOperacao { get; set; }
 
-        //public CategoriaEntity Categoria { get; set; }
+        public CategoriaEntity Categoria { get; set; }
 
     }
 }

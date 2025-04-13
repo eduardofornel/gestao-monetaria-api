@@ -1,5 +1,5 @@
-using BaseBackEnd.Api.Extensions;
-using BaseBackEnd.Infrastructure.Configurations.Fundation;
+using GestaoMonetariaApi.Api.Extensions;
+using GestaoMonetariaApi.Infrastructure.Configurations.Fundation;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);

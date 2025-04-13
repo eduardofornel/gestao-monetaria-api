@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\BaseBackEnd.Domain\BaseBackEnd.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\BaseBackEnd.Infrastructure\BaseBackEnd.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

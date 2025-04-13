@@ -1,19 +1,24 @@
-﻿using BaseBackEnd.Application.Interfaces.Services;
-using BaseBackEnd.Application.Services;
-using BaseBackEnd.Domain.Interfaces.Repositories;
-using BaseBackEnd.Infrastructure.Repositories;
+﻿
+using GestaoMonetariaApi.Application.Interfaces.Services;
+using GestaoMonetariaApi.Application.Services;
+using GestaoMonetariaApi.Domain.Interfaces.Repositories;
+using GestaoMonetariaApi.Infrastructure.Repositories;
 
-namespace BaseBackEnd.Api.Extensions
+namespace GestaoMonetariaApi.Api.Extensions
 {
     public static class DependencyInjectionConfig
     {
         public static IServiceCollection AddDependencies(this IServiceCollection services)
         {
-            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 
-            services.AddScoped<IOperacaoRepository, OperacaoRepository>();
             services.AddScoped<IOperacaoService, OperacaoService>();
+            services.AddScoped<IOperacaoRepository, OperacaoRepository>();
+            
+            services.AddScoped<ICategoriaService, CategoriaService>();
+            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+
 
 
             return services;

@@ -1,4 +1,4 @@
-﻿namespace BaseBackEnd.Fwk.Entities
+﻿namespace GestaoMonetariaApi.Fwk.Entities
 {
     /// <summary>
     /// Classe base para criação de entidades mapeadas com banco de dados

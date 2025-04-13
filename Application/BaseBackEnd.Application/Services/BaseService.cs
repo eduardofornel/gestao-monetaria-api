@@ -1,6 +1,6 @@
-﻿using BaseBackEnd.Application.Interfaces.Services;
+﻿using GestaoMonetariaApi.Application.Interfaces.Services;
 
-namespace BaseBackEnd.Application.Services
+namespace GestaoMonetariaApi.Application.Services
 {
     public class BaseService<T> : IBaseService<T> where T : class
     {

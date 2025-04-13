@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Integrations\" />
-    <Folder Include="Migrations\" />
+    <Compile Remove="Integrations\**" />
+    <Compile Remove="Migrations\**" />
+    <EmbeddedResource Remove="Integrations\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Integrations\**" />
+    <None Remove="Migrations\**" />
   </ItemGroup>
 
   <ItemGroup>

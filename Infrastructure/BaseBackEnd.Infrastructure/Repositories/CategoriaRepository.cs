@@ -4,9 +4,9 @@ using GestaoMonetariaApi.Infrastructure.Configurations.Fundation;
 
 namespace GestaoMonetariaApi.Infrastructure.Repositories
 {
-    public class OperacaoRepository : BaseRepository<OperacaoEntity>, IOperacaoRepository
+    public class CategoriaRepository : BaseRepository<CategoriaEntity>, ICategoriaRepository
     {
-        public OperacaoRepository(ApplicationDbContext context) : base(context)
+        public CategoriaRepository(ApplicationDbContext context) : base(context)
         {
         }
 
