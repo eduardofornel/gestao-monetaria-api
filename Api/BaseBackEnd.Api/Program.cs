@@ -1,18 +1,15 @@
 using GestaoMonetariaApi.Api.Extensions;
-using GestaoMonetariaApi.Infrastructure.Configurations.Fundation;
+using GestaoMonetariaApi.Infrastructure.Configurations.Foundation;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuração da aplicação
+// ConfiguraÃ§Ã£o da aplicaÃ§Ã£o
 builder.Configuration
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("./Properties/appsettings.json", optional: false, reloadOnChange: true);
 
-// Connection string (opcional se usada internamente)
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-// Injeta serviços da infraestrutura
+// Injeta serviÃ§os da infraestrutura
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddDependencies();
 

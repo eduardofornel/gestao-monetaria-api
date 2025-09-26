@@ -1,4 +1,5 @@
 ﻿using GestaoMonetariaApi.Application.Interfaces.Services;
+using GestaoMonetariaApi.Domain.Interfaces.Repositories;
 
 namespace GestaoMonetariaApi.Application.Services
 {
@@ -11,7 +12,7 @@ namespace GestaoMonetariaApi.Application.Services
             _repository = repository;
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T?> GetByIdAsync(int id)
         {
             return await _repository.GetByIdAsync(id);
         }

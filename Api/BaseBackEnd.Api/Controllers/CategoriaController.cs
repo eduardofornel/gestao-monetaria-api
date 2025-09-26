@@ -2,20 +2,14 @@
 using GestaoMonetariaApi.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GestaoMonetaria.Api.Controllers.Categoria
+namespace GestaoMonetariaApi.Api.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class CategoriaController : BaseController<CategoriaEntity>
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class CategoriaController : BaseController<CategoriaEntity>
+    public CategoriaController(ICategoriaService categoriaService)
+        : base(categoriaService)
     {
-        private readonly ICategoriaService _operacaoService;
-
-        public CategoriaController(ICategoriaService operacaoService)
-            : base(operacaoService)
-        {
-            _operacaoService = operacaoService;
-        }
-
-
     }
 }
