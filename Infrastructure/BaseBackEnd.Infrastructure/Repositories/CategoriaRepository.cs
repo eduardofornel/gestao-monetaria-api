@@ -1,14 +1,12 @@
 ﻿using GestaoMonetariaApi.Domain.Entities;
 using GestaoMonetariaApi.Domain.Interfaces.Repositories;
-using GestaoMonetariaApi.Infrastructure.Configurations.Fundation;
+using GestaoMonetariaApi.Infrastructure.Configurations.Foundation;
 
-namespace GestaoMonetariaApi.Infrastructure.Repositories
+namespace GestaoMonetariaApi.Infrastructure.Repositories;
+
+public class CategoriaRepository : BaseRepository<CategoriaEntity>, ICategoriaRepository
 {
-    public class CategoriaRepository : BaseRepository<CategoriaEntity>, ICategoriaRepository
+    public CategoriaRepository(ApplicationDbContext context) : base(context)
     {
-        public CategoriaRepository(ApplicationDbContext context) : base(context)
-        {
-        }
-
     }
 }

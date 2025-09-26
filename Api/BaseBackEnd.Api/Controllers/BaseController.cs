@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
 
+namespace GestaoMonetariaApi.Api.Controllers;
+
 [ApiController]
 [Route("api/[controller]")]
 public class BaseController<T> : ControllerBase where T : class, new()
@@ -36,13 +38,20 @@ public class BaseController<T> : ControllerBase where T : class, new()
     {
         await _service.AddAsync(entity);
 
-        int newId = GetEntityId(entity);
+        var newId = GetEntityId(entity);
         return CreatedAtAction(nameof(Get), new { id = newId }, entity);
     }
 
     [HttpPut("{id:int}")]
     public async Task<IActionResult> Put(int id, [FromBody] T entity)
     {
+        var existingEntity = await _service.GetByIdAsync(id);
+        if (existingEntity == null)
+        {
+            return NotFound();
+        }
+
+        MergeEntityId(entity, id);
         await _service.UpdateAsync(entity);
         return NoContent();
     }
@@ -59,14 +68,24 @@ public class BaseController<T> : ControllerBase where T : class, new()
         return NoContent();
     }
 
-    private int GetEntityId(T entity)
+    private static int GetEntityId(T entity)
     {
-        PropertyInfo prop = typeof(T).GetProperty("Id");
-        if (prop != null)
+        var prop = typeof(T).GetProperty("Id");
+        if (prop == null)
         {
-            object value = prop.GetValue(entity);
-            return value != null ? (int)value : 0;
+            return 0;
         }
-        return 0;
+
+        var value = prop.GetValue(entity);
+        return value is int id ? id : 0;
+    }
+
+    private static void MergeEntityId(T entity, int id)
+    {
+        var prop = typeof(T).GetProperty("Id");
+        if (prop != null && prop.CanWrite)
+        {
+            prop.SetValue(entity, id);
+        }
     }
 }

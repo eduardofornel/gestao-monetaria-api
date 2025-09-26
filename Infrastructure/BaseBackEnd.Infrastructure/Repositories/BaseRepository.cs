@@ -1,5 +1,8 @@
-﻿using GestaoMonetariaApi.Infrastructure.Configurations.Fundation;
+using GestaoMonetariaApi.Domain.Interfaces.Repositories;
+using GestaoMonetariaApi.Infrastructure.Configurations.Foundation;
 using Microsoft.EntityFrameworkCore;
+
+namespace GestaoMonetariaApi.Infrastructure.Repositories;
 
 public class BaseRepository<T> : IBaseRepository<T> where T : class
 {
@@ -12,7 +15,7 @@ public class BaseRepository<T> : IBaseRepository<T> where T : class
         _dbSet = context.Set<T>();
     }
 
-    public async Task<T> GetByIdAsync(int id)
+    public async Task<T?> GetByIdAsync(int id)
     {
         return await _dbSet.FindAsync(id);
     }

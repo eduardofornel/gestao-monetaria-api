@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace SeuNamespace
+namespace GestaoMonetariaApi.Infrastructure.Configurations
 {
     public class OperacaoConfiguration : IEntityTypeConfiguration<OperacaoEntity>
     {

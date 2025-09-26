@@ -1,4 +1,5 @@
-﻿
+﻿using AutoMapper;
+using BaseBackEnd.Domain;
 using GestaoMonetariaApi.Application.Interfaces.Services;
 using GestaoMonetariaApi.Application.Services;
 using GestaoMonetariaApi.Domain.Interfaces.Repositories;
@@ -15,11 +16,11 @@ namespace GestaoMonetariaApi.Api.Extensions
 
             services.AddScoped<IOperacaoService, OperacaoService>();
             services.AddScoped<IOperacaoRepository, OperacaoRepository>();
-            
+
             services.AddScoped<ICategoriaService, CategoriaService>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 
-
+            services.AddAutoMapper(typeof(MappingProfile));
 
             return services;
         }
